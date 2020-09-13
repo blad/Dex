@@ -1,9 +1,9 @@
-(ns ronan.core
+(ns dex.core
   (:require [clojure.java.shell :refer [sh]])
   (:gen-class))
 
 (defn -main
-  "Ronan Main Function"
+  "Dex Main Function"
   [& args]
   (println "Hello, World")
   (shutdown-agents))

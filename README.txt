@@ -1,14 +1,16 @@
-Ronan
+Dex
 ---------------------------------------
-Ronan is a utility hook for Git that makes taggig commits with a ticket number
+Dex is a utility hook for Git that makes taggig commits with a ticket number
 or value simple.
 
-Ronan associates a branch to a ticket number or arbitrary value.
+Dex associates a branch to a ticket number or arbitrary value.
 Every commit on that branch is then annotated with that ticket number or value.
+
 
 Installation
 ---------------------------------------
 TBD
+
 
 Usage
 ---------------------------------------
@@ -20,6 +22,7 @@ Associating a ticket number or value to an existing branch:
 
 Associating a ticket number or value to the current branch:
   | git track {ticket_number}
+
 
 License
 ----------------------------------------

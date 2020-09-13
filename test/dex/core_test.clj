@@ -1,6 +1,6 @@
-(ns ronan.core-test
+(ns dex.core-test
   (:require [clojure.test :refer :all]
-            [ronan:refer :all]))
+            [dex.core :refer :all]))
 
 (deftest a-test
   (testing "tautology"
