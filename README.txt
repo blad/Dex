@@ -1,26 +1,33 @@
 Dex
 ---------------------------------------
-Dex is a utility hook for Git that makes taggig commits with a ticket number
-or value simple.
+Dex is a utility for Git that makes annotating commits simple. Dex associates 
+a branch to a ticket number or arbitrary value. Every commit on that branch is 
+annotated with that ticket number or value.
 
-Dex associates a branch to a ticket number or arbitrary value.
-Every commit on that branch is then annotated with that ticket number or value.
+Example annotation with the value: `ENG-042`:
+
+   [ENG-042] Fix the Universe
 
 
 Installation
 ---------------------------------------
-TBD
+1. Download the latest release from: https://github.com/blad/Dex/releases
+2. Extract the contents of the release bundle and place contents into your PATH.
+3. Run: `dex-tracker install`. This installs a global git alias for `track`.
+4. Ready to use with any repository.
 
 
 Usage
 ---------------------------------------
-Associating a ticket number or value to a new branch:
-  | git checkout -b {branch_name} && git track {ticket_number}
+Associating a ticket number or value to the current branch:
+  | git track {ticket_number}
 
 Associating a ticket number or value to an existing branch:
-  | git checkout {branch_name} && git track {ticket_number}
+  | git checkout {branch_name} 
+  | git track {ticket_number}
 
-Associating a ticket number or value to the current branch:
+Associating a ticket number or value to a new branch:
+  | git checkout -b {branch_name} 
   | git track {ticket_number}
 
 
