@@ -1,10 +1,10 @@
 #! /usr/bin/env bash
 
 SCRIPT_ROOT=$(dirname $0)
-DEX_JAR="$SCRIPT_ROOT/dex-0.0.1-standalone.jar"
+DEX_JAR="$SCRIPT_ROOT/dex-__VERSION__-standalone.jar"
 
 if [[ -e "${DEX_JAR}" ]]; then
-  java -jar "${DEX_JAR}" $1
+  java -jar "${DEX_JAR}" $@
 else 
   echo "dex-tracker is missing standalone Java jar. Make sure Dex is installed correctly."
   exit 1
