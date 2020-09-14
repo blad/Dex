@@ -1,7 +1,10 @@
 #! /usr/bin/env bash
 
 VERSION="0.0.1-SNAPSHOT"
+RELEASE_BUNDLE="dex-tracker-${VERSION}.tgz"
 
+# Clean build directory
+rm -rf build
 mkdir build
 
 # Create Standalone Jar
@@ -12,9 +15,10 @@ cp "target/uberjar/dex-${VERSION}-standalone.jar" "build/dex-${VERSION}-standalo
 
 # Copy Bootstrap Script with App Version
 cat resources/dex-tracker | sed -e "s/__VERSION__/${VERSION}/" > build/dex-tracker
-
 chmod +x build/dex-tracker
-
 mv build dex-tracker
-tar -cvzf "dex-tracker-${VERSION}.tgz" dex-tracker/*
+tar -cvzf $RELEASE_BUNDLE dex-tracker/*
+
 mv dex-tracker build
+rm build/*
+mv $RELEASE_BUNDLE build/
