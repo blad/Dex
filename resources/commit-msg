@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+if [[ -z $(which dex-tracker) ]]; then
+  echo "dex-tracker is not available in your path. Ensure dex-tracker is contained in your path."
+  exit 1;
+fi
+
+dex-tracker track "$1"
