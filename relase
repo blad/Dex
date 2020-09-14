@@ -15,4 +15,6 @@ cat resources/dex-tracker | sed -e "s/__VERSION__/${VERSION}/" > build/dex-track
 
 chmod +x build/dex-tracker
 
-tar -cvzf "${VERSION}.tgz" build/*
+mv build dex-tracker
+tar -cvzf "dex-tracker-${VERSION}.tgz" dex-tracker/*
+mv dex-tracker build
